@@ -224,10 +224,6 @@ const[activeTab,setActiveTab]=useState<'skills' | 'projects'|'Certificate'>('ski
         )}
         {activeTab === 'projects' && (
         <>
-        <div>
-          halo tes commit
-        </div>
-       
         
         </>
         )}
