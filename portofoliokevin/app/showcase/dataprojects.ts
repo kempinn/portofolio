@@ -5,9 +5,7 @@ export function dataProjects() {
             description: "Curhat Aja is a mental health consultation app that allows users to connect with doctors or psychologists via chat, voice, or video calls.",
             software: ["Figma"],
             link: "https://drive.google.com/drive/folders/1msevutM1CQLRmV6pY1H0S7ZnTaiZB6WD?usp=sharing",
-            background : "bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400"
-        },
-
+            background : "https://id.pinterest.com/pin/1138073768351180590/"
         {
             title: "OPPAY (Ojek Payung)",
             description: "OPPAY is a mobile app that helps users travel safely during rain by requesting an umbrella-taxi service around BINUS @Semarang.",

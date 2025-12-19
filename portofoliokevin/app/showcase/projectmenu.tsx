@@ -10,40 +10,44 @@ import {
   Briefcase, 
   Award 
 } from 'lucide-react';
+import { dataProjects } from "./dataprojects";
 
 export default function ShowcaseMenu() {
-const[activeTab,setActiveTab]=useState<'skills' | 'projects'|'Certificate'>('skills');
-
+const[activeTab,setActiveTab]=useState<'skills' | 'projects'|'certificate'>('skills');
+const ClickTab = "flex items-center gap-2 px-6 py-2.5 bg-sky-500 text-white rounded-lg text-sm font-semibold shadow-sm transition-all"
+const NoClickTab = "flex items-center gap-2 px-6 py-2.5 text-gray-500 hover:text-gray-900 rounded-lg text-sm font-medium transition-all"
+    
     return(
     <>
         <div className="flex justify-center mb-16">
             <div className="bg-gray-50 p-1.5 rounded-xl inline-flex">
                 <button 
                 onClick={()=>setActiveTab('skills')}
-                className="flex items-center gap-2 px-6 py-2.5 bg-sky-500 text-white rounded-lg text-sm font-semibold shadow-sm transition-all">
+                className={activeTab === 'skills' ? ClickTab : NoClickTab}>
                  <Layers size={16} />
                  Skills
                 </button>
                 <button 
                 onClick={()=>setActiveTab('projects')}
-                className="flex items-center gap-2 px-6 py-2.5 text-gray-500 hover:text-gray-900 rounded-lg text-sm font-medium transition-all">
+                className={activeTab === 'projects' ? ClickTab : NoClickTab}>
                 <Briefcase size={16} />
                 Projects
                 </button>
                 <button
-                onClick={()=>setActiveTab('Certificate')}
-                className="flex items-center gap-2 px-6 py-2.5 text-gray-500 hover:text-gray-900 rounded-lg text-sm font-medium transition-all">
+                onClick={()=>setActiveTab('certificate')}
+                className={activeTab === 'certificate' ? ClickTab : NoClickTab}>
                  <Award size={16} />
                 Certificates
                 </button>
           </div>
         </div>
+        {/* TAB SKILLS */}
         {activeTab === 'skills' && (
         <>
-        <div className="mb-10 text-center">
-          <h2 className="text-2xl font-bold text-gray-400 mb-3">Technical Expertise</h2>
-          <p className="text-gray-500">Core competencies developed through academic projects and internship experience</p>
-        </div>
+          <div className="mb-10 text-center">
+            <h2 className="text-2xl font-bold text-gray-400 mb-3">Featured Projects</h2>
+            <p className="text-gray-500">A selection of projects showcasing my passion for creating exceptional digital experiences</p>
+          </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
@@ -218,16 +222,55 @@ const[activeTab,setActiveTab]=useState<'skills' | 'projects'|'Certificate'>('ski
         </div>
 
         </>
-
-        
-
         )}
         {activeTab === 'projects' && (
-        <>
+          <>
+          <div className="mb-10 text-center">
+            <h2 className="text-2xl font-bold text-gray-400 mb-3">Technical Expertise</h2>
+            <p className="text-gray-500">Core competencies developed through academic projects and internship experience</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* CARD BACKGROUND */}
+            {dataProjects().map((project, index) => (
+              <div key={index} className="h-full">
+                <div className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition h-full flex flex-col w-full group">
+                  <div className="relative h-40 bg-gradient-to-r from-blue-500 to-cyan-500 overflow-hidden"
+                    style={{
+                      backgroundImage: `url(${project.background})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}>
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                       <span className="text-white text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                        View Details 
+                        </span>
+                    </div>
+                  </div>
+                  {/* ISI BACKGROUND */}
+                    <div className="p-6">
+                      <h3 className="font-bold text-lg mb-2">{project.title}</h3>
+                        <p className="text-sm text-gray-500 mb-4 ">{project.description}</p>
+                          <div className="flex gap-2 flex-wrap mt-auto">
+                            {project.software.map((software, idx) => (
+                            <span 
+                            key={idx}
+                            className="px-3 py-1 bg-gray-100 text-xs rounded-full">{software}</span>
+                            ))}
+                            
+                          </div>
+                      </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          </>
+          
         
-        </>
+      
+        
         )}
-        {activeTab === 'Certificate' && (
+        {activeTab === 'certificate' && (
         <>
         </>
         )}
