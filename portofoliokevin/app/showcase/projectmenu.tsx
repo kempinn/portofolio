@@ -11,6 +11,7 @@ import {
   Award 
 } from 'lucide-react';
 import { dataProjects } from "./dataprojects";
+import Link from "next/link";
 
 export default function ShowcaseMenu() {
 const[activeTab,setActiveTab]=useState<'skills' | 'projects'|'certificate'>('skills');
@@ -234,6 +235,8 @@ const NoClickTab = "flex items-center gap-2 px-6 py-2.5 text-gray-500 hover:text
             {/* CARD BACKGROUND */}
             {dataProjects().map((project, index) => (
               <div key={index} className="h-full">
+                <Link href={`/showcase/${project.slug}`}>
+                
                 <div className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition h-full flex flex-col w-full group">
                   <div className="relative h-40 bg-gradient-to-r from-blue-500 to-cyan-500 overflow-hidden"
                     style={{
@@ -261,6 +264,7 @@ const NoClickTab = "flex items-center gap-2 px-6 py-2.5 text-gray-500 hover:text
                           </div>
                       </div>
                 </div>
+                </Link>
               </div>
             ))}
           </div>
