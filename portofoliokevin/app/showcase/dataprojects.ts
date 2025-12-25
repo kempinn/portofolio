@@ -6,8 +6,50 @@ export function dataProjects() {
             description: "Curhat Aja is a mental health consultation app that allows users to connect with doctors or psychologists via chat, voice, or video calls.",
             software: ["Figma"],
             link: "https://drive.google.com/drive/folders/1msevutM1CQLRmV6pY1H0S7ZnTaiZB6WD?usp=sharing",
-            background : "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg"
+            background : "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
+            tools : 4,
+            documentation : 4,
+            toolsused:["Figma","Visual Paradigm","Miro","Google Form"],
+            features :["User Authentication","Chat Functionality","Voice and Video Calls","Appointment Scheduling","User Profile Management"],
+            process: [
+        {
+            title: "Requirement Gathering",
+            description:
+            "Mengumpulkan kebutuhan bisnis dan user melalui interview stakeholder",
         },
+        {
+            title: "Business Requirements Document",
+            description:
+            "Menyusun BRD yang mencakup scope, objectives, dan constraints",
+        },
+        {
+            title: "Use Case Diagram",
+            description:
+            "Membuat diagram use case untuk memetakan interaksi user dengan sistem",
+        },
+        {
+            title: "Wireframing",
+            description:
+            "Merancang wireframe low-fidelity untuk validasi konsep",
+        },
+        {
+            title: "UI/UX Design",
+            description: "Membuat high-fidelity mockup dengan Figma",
+        },
+        
+        ],
+            images: [
+                    "/images/ecommerce-1.jpg",
+                    "/images/ecommerce-2.jpg",
+                     "/images/ecommerce-3.jpg",
+        ],
+
+            links: {
+                documentation: "#",
+            },
+
+        },
+        
         {
             slug: "oppay",
             title: "OPPAY (Ojek Payung)",

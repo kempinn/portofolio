@@ -13,8 +13,29 @@ export default async function ProjectDetails({params}:Props){
 
     
     return(
-        <div>
-            test detail page {projects.title}   
-        </div>
+    <div>
+        <section className="max-w-7xl mx-auto px-14 py-30">
+            <div className="grid grid-cols-2 items-start gap-30">
+                <div>
+                    <div>
+                        <h1 className="text-4xl font-bold mb-4 py-2">{projects.title}</h1>
+                        <p className="text-gray-500 text-lg leading-relaxed">
+                        {projects.description}
+                        </p>
+                    </div>
+                    
+                    <div>
+
+                    </div>
+                    
+                    
+                </div>
+                
+                <div>
+                    tes
+                </div>
+            </div>  
+        </section>
+    </div>
     )
 }

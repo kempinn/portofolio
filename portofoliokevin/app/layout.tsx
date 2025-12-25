@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       {/* PERUBAHAN ADA DI SINI */}
       <body 
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-slate-900 min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-white text-slate-900 min-h-screen`}
       >
         
         {/* BUNGKUS DI SINI (Lenis Scrolling) */}
