@@ -34,14 +34,15 @@ export function dataProjects() {
         },
         {
             title: "UI/UX Design",
-            description: "Membuat high-fidelity mockup dengan Figma",
+            description: 
+            "Membuat high-fidelity mockup dengan Figma",
         },
         
         ],
             images: [
-                    "/images/ecommerce-1.jpg",
-                    "/images/ecommerce-2.jpg",
-                     "/images/ecommerce-3.jpg",
+                    "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
+                    "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
+                    "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
         ],
 
             links: {
