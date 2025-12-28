@@ -41,7 +41,7 @@ export function dataProjects() {
         ],
             images: [
                     "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
-                    "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
+                    "https://i.pinimg.com/1200x/8c/77/20/8c7720ee535fcaf3c108bb60ec9310cd.jpg",
                     "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
         ],
 

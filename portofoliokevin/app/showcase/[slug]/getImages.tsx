@@ -8,7 +8,7 @@ interface Images {
 
 export default function GetImages({ images }: Images) {
   const [active, setActive] = useState(0);
-
+  const [direction, setDirection] = useState(0);
   const prev = () => {
     setActive((prev) =>
       prev === 0 ? images.length - 1 : prev - 1
@@ -21,24 +21,30 @@ export default function GetImages({ images }: Images) {
     );
   };
 
+  const handlerImages = (index: number)=>{
+    setDirection(index > active ? 1 : -1);
+    setActive(index);
+
+  }
+
   if (!images || images.length === 0) return null;
 
   return (
     <div className="w-full h-auto relative group">
       <button
         onClick={prev}
-        className="absolute left-5 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition opacity-0 group-hover:opacity-100"
+        className="absolute left-5 top-1/3 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition opacity-0 group-hover:opacity-100"
       >
         <ChevronLeft className="text-black"/>
       </button>
       
       <button 
       onClick={next}
-      className="absolute right-5 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition opacity-0 group-hover:opacity-100">
+      className="absolute right-5 top-1/3 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition opacity-0 group-hover:opacity-100">
         <ChevronRight className="text-black" />
       </button>
 
-      <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 bg-white text-gray-500 px-5 py-1 rounded-full font-medium shadow-lg hover:bg-gray-100 hover:scale-105 transition-transform">
+      <button className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 bg-white text-gray-500 px-5 py-1 rounded-full font-medium shadow-lg hover:bg-gray-100 hover:scale-105 transition-transform">
         Click to Preview
       </button>
         
@@ -47,7 +53,23 @@ export default function GetImages({ images }: Images) {
         alt="Project Preview"
         className="w-full h-auto rounded-2xl object-cover"
       />
-
+      {/* Printilan gambar bawah*/}
+        {images.length > 1 && (
+          <div className="grid grid-cols-3 gap-2">
+            {images.map((img, index) => (
+              <button 
+              key={index}
+              onClick={() => handlerImages(index)}
+              className={`relative mt-15 rounded-xl overflow-hidden aspect-video cursor-pointer transition-all ${index===active ? "ring-2 ring-blue-500 ring-offset-2 opacity-100 scale-105" : "opacity-60 hover:opacity-100 hover:scale-105" }`}>
+                <img 
+                src={img}
+                alt={`Thumbnail ${index + 1}`} 
+                className="w-full h-full object-cover"/>
+                
+              </button>
+            ))}
+          </div>
+        )}  
       
     </div>
   );
