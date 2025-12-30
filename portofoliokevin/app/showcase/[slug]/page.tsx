@@ -1,7 +1,8 @@
 import { dataProjects } from "@/app/showcase/dataprojects";
 import { notFound } from "next/navigation";
-import { Wrench, FileText,Notebook,CircleDot} from "lucide-react"
+import { Wrench, FileText,Notebook,CircleDot, Star, Circle} from "lucide-react"
 import GetImages from "./getImages";
+import { div } from "framer-motion/m";
 
 
 interface Props {
@@ -104,7 +105,24 @@ export default async function ProjectDetails({params}:Props){
                 
                 <div>
                   {projects.images && <GetImages images={projects.images} /> }
+                  <div>
+                    <div className="w-full h-auto mt-8 bg-white rounded-2xl p-6 border border-gray-200 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]">
+                        <h3 className="text-lg font-semibold mb-5 flex items-center gap-2 text-gray-500">
+                            <Star className="text-blue-500 w-6 h-6" /> Fitur yang Dirancang
+                        </h3>
+                        {projects.features?.map((feature, index) => (
+                            <div key={index} className="flex items-start gap-3 mb-4">
+                                <div className="mt-1">
+                                    <Circle className="h-4 w-4 text-blue-500" />
+                                </div>
+                                <p className="text-gray-600">{feature}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                </div>
+                 
+                 
             </div>  
         </section>
     </div>

@@ -1,6 +1,6 @@
 "use client";
 import { use, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight,Star,X} from "lucide-react";
 import { motion, AnimatePresence, scale } from "framer-motion";
 
 interface Images {
@@ -8,11 +8,12 @@ interface Images {
 }
 
 export default function GetImages({ images }: Images) {
-  const [active, setActive] = useState(0);
-  const [direction, setDirection] = useState(0);
- const [isHovered, setIsHovered] = useState(false);
+const [active, setActive] = useState(0);
+const [direction, setDirection] = useState(0);
+const [isHovered, setIsHovered] = useState(false);
+const [showModal, setShowModal] = useState(false);
 
-  // --- LOGIKA AUTO PLAY ---
+  // Auto Play
   useEffect(() => {
     // Jika sedang di-hover, jangan jalankan timer (Pause)
     if (isHovered) return;
@@ -21,11 +22,12 @@ export default function GetImages({ images }: Images) {
       // Panggil logika Next secara otomatis
       setDirection(1);
       setActive((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 3000); // Ganti 3000 dengan durasi yang kamu mau (ms)
+    }, 15000); // Ganti 5000 dengan durasi yang kamu mau (ms)
 
     // Bersihkan timer saat komponen berubah (Clean up)
-    return () => clearInterval(autoPlay);
+    return () => clearInterval(autoPlay)
   }, [isHovered, images.length]); // Timer direset jika status hover berubah
+  
   function prev() {
     setActive((prev) => prev === 0 ? images.length - 1 : prev - 1
     );
@@ -80,7 +82,9 @@ export default function GetImages({ images }: Images) {
           <ChevronRight className="text-black" />
         </button>
 
-        <button className="absolute top-4/7 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 bg-white text-gray-500 px-5 py-1 rounded-full font-medium shadow-lg hover:bg-gray-100 hover:scale-105 transition-transform">
+        <button 
+        onClick={() => setShowModal(true)}
+        className="absolute top-4/7 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 bg-white text-gray-500 px-5 py-1 rounded-full font-medium shadow-lg hover:bg-gray-100 hover:scale-105 transition-transform">
           Click to Preview
         </button>
         <AnimatePresence initial={false} custom={direction}>
@@ -101,8 +105,10 @@ export default function GetImages({ images }: Images) {
             }}
           />
         </AnimatePresence>
+      
 
       </div>
+      
       {/* Printilan gambar bawah*/}
         {images.length > 1 && (
           <div className="grid grid-cols-3 gap-2">
@@ -120,7 +126,45 @@ export default function GetImages({ images }: Images) {
             ))}
           </div>
         )}  
-      
+        <AnimatePresence>
+        
+        {showModal && (
+          // BACKDROP: Layar Hitam Fullscreen (fixed inset-0 z-50)
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+            onClick={() => setShowModal(false)} // Klik luar untuk close
+          >
+            {/* KONTEN MODAL */}
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.5, opacity: 0 }}
+              className="relative max-w-5xl w-full max-h-[90vh] flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()} // Supaya klik gambar tidak close modal
+              >
+              
+              {/* Tombol Close (X) */}
+              <button
+                onClick={() => setShowModal(false)}
+                className="absolute -top-12 right-0 bg-white/10 text-white p-2 rounded-full hover:bg-white/20 transition"
+              >
+                <X size={24} />
+              </button>
+
+              {/* Gambar Besar */}
+              <img 
+                src={images[active]} 
+                alt="Fullscreen Preview" 
+                className="w-full h-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    
     </div>
   );
 }
