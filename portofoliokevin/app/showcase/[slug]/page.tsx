@@ -1,4 +1,5 @@
 import { dataProjects } from "@/app/showcase/dataprojects";
+import { dataCertificate } from "../dataCertificate";
 import { notFound } from "next/navigation";
 import { Wrench, FileText,Notebook,CircleDot, Star, Circle} from "lucide-react"
 import GetImages from "./getImages";
@@ -16,7 +17,6 @@ export default async function ProjectDetails({params}:Props){
     const projects= dataProjects().find(item => item.slug === slug);
     if(!projects) return notFound();
 
-    
     return(
     <div>
         <section className="max-w-7xl mx-auto px-14 py-30">

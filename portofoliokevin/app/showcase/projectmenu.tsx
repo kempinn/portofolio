@@ -11,32 +11,42 @@ import {
   Award 
 } from 'lucide-react';
 import { dataProjects } from "./dataprojects";
+import { dataCertificate } from "./dataCertificate";
 import Link from "next/link";
+import CardCertificate from "./certificateComponent";
+
 
 export default function ShowcaseMenu() {
 const[activeTab,setActiveTab]=useState<'skills' | 'projects'|'certificate'>('skills');
 const ClickTab = "flex items-center gap-2 px-6 py-2.5 bg-sky-500 text-white rounded-lg text-sm font-semibold shadow-sm transition-all"
 const NoClickTab = "flex items-center gap-2 px-6 py-2.5 text-gray-500 hover:text-gray-900 rounded-lg text-sm font-medium transition-all"
-    
+
+const certificates = dataCertificate();
+    //total certificate
+    const totalCertificate = certificates.length
+    //total platform
+    const totalPlatform = new Set(certificates.map(item => item.issued)).size
+    //total skills
+    const totalSkills = new Set(certificates.flatMap(item=> item.skills_act)).size
     return(
     <>
         <div className="flex justify-center mb-16">
             <div className="bg-gray-50 p-1.5 rounded-xl inline-flex">
                 <button 
                 onClick={()=>setActiveTab('skills')}
-                className={activeTab === 'skills' ? ClickTab : NoClickTab}>
+                className={`cursor-pointer ${activeTab === 'skills' ? ClickTab : NoClickTab}`}>
                  <Layers size={16} />
                  Skills
                 </button>
                 <button 
                 onClick={()=>setActiveTab('projects')}
-                className={activeTab === 'projects' ? ClickTab : NoClickTab}>
+                className={`cursor-pointer ${activeTab === 'projects' ? ClickTab : NoClickTab}`}>
                 <Briefcase size={16} />
                 Projects
                 </button>
                 <button
                 onClick={()=>setActiveTab('certificate')}
-                className={activeTab === 'certificate' ? ClickTab : NoClickTab}>
+                className={`cursor-pointer ${activeTab === 'certificate' ? ClickTab : NoClickTab}`}>
                  <Award size={16} />
                 Certificates
                 </button>
@@ -237,7 +247,7 @@ const NoClickTab = "flex items-center gap-2 px-6 py-2.5 text-gray-500 hover:text
               <div key={index} className="h-full">
                 <Link href={`/showcase/${project.slug}`}>
                 
-                <div className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition h-full flex flex-col w-full group">
+                <div className="cursor-pointer bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition h-full flex flex-col w-full group">
                   <div className="relative h-40 bg-gradient-to-r from-blue-500 to-cyan-500 overflow-hidden"
                     style={{
                       backgroundImage: `url(${project.background})`,
@@ -252,13 +262,13 @@ const NoClickTab = "flex items-center gap-2 px-6 py-2.5 text-gray-500 hover:text
                   </div>
                   {/* ISI BACKGROUND */}
                     <div className="p-6">
-                      <h3 className="font-bold text-lg mb-2">{project.title}</h3>
+                      <h3 className="font-bold text-lg mb-2 text-gray-500">{project.title}</h3>
                         <p className="text-sm text-gray-500 mb-4 ">{project.description}</p>
                           <div className="flex gap-2 flex-wrap mt-auto">
                             {project.software.map((software, idx) => (
                             <span 
                             key={idx}
-                            className="px-3 py-1 bg-gray-100 text-xs rounded-full">{software}</span>
+                            className="px-3 py-1 bg-gray-100 text-xs font-medium text-gray-500 rounded-full">{software}</span>
                             ))}
                             
                           </div>
@@ -276,7 +286,34 @@ const NoClickTab = "flex items-center gap-2 px-6 py-2.5 text-gray-500 hover:text
         )}
         {activeTab === 'certificate' && (
         <>
-        
+          <div className="mb-10 text-center">
+            <h2 className="text-2xl font-bold text-gray-400 mb-3">Professional Certifications</h2>
+            <p className="text-gray-500">Industry-recognized certifications that validate my skills and commitment to continuous learning</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
+            <div className="grid grid-row-1 text-center bg-gray-50 p-3 rounded-xl shadow-sm">
+              <h3 className="text-2xl font-bold text-sky-500">
+              {totalCertificate}
+              </h3>
+              <p className="text-gray-500 mt-2 text-center">Certificates</p>
+            </div>
+            
+            <div className="grid grid-row-1 text-center bg-gray-50 p-3 rounded-xl shadow-sm">
+              <h3 className="text-2xl font-bold text-sky-500">
+              {totalPlatform}
+              </h3>
+              <p className="text-gray-500 mt-2">Platforms</p>
+            </div>
+
+            <div className="grid grid-row-1 text-center bg-gray-50 p-3 rounded-xl shadow-sm">
+              <h3 className="text-2xl font-bold text-sky-500">
+              {totalSkills}+
+              </h3>
+              <p className="text-gray-500 mt-2">Skills Verified</p>
+            </div>
+          </div>
+          <CardCertificate/>
         </>
         )}
     </>
