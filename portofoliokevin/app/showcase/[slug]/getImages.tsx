@@ -89,7 +89,7 @@ const [showModal, setShowModal] = useState(false);
         </button>
         <AnimatePresence initial={false} custom={direction}>
           <motion.img
-          className="w-full h-auto rounded-2xl object-cover"
+          className="w-full h-full rounded-2xl object-contain"
             key={active}
             src={images[active]}
             alt="Project Preview"
@@ -120,7 +120,7 @@ const [showModal, setShowModal] = useState(false);
                 <img 
                 src={img}
                 alt={`Thumbnail ${index + 1}`} 
-                className="w-full h-full object-cover"/>
+                className="w-full h-full object-contain"/>
                 
               </button>
             ))}

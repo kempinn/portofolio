@@ -53,10 +53,17 @@ export default async function ProjectDetails({params}:Props){
                         </div>
                     </div>
                     <div>
-                        <button className="group flex items-center justify-center bg-sky-500 mt-4 text-white px-5 py-2 rounded-2xl full hover:bg-sky-600 transition duration-300">
-                            <Notebook className="h-5 w-5 mr-2 text-white group-hover:text-white"/>
-                            <p className="text-white group-hover:text-white">Documentation</p>
+                        <a 
+                        href={projects.link} // Mengambil link dari array dataProjects secara otomatis
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                        >
+                        <button className="group flex items-center justify-center bg-sky-500 mt-4 text-white px-5 py-2 rounded-2xl hover:bg-sky-600 transition duration-300">
+                        <Notebook className="h-5 w-5 mr-2 text-white group-hover:text-white"/>
+                        <p className="text-white group-hover:text-white">Documentation</p>
                         </button>
+                        </a>
                     </div>
                     <div className="flex flex-row gap-2 mt-10">
                         <Wrench className="h-6 w-6 text-blue-300" />

@@ -251,7 +251,8 @@ const certificates = dataCertificate();
                   <div className="relative h-40 bg-gradient-to-r from-blue-500 to-cyan-500 overflow-hidden"
                     style={{
                       backgroundImage: `url(${project.background})`,
-                      backgroundSize: 'cover',
+                      backgroundSize: '100% 100%',
+                      backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center',
                     }}>
                     <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">

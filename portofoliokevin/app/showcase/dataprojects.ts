@@ -1,3 +1,4 @@
+
 export function dataProjects() {
     return [
         {
@@ -6,32 +7,23 @@ export function dataProjects() {
             description: "Curhat Aja is a mental health consultation app that allows users to connect with doctors or psychologists via chat, voice, or video calls.",
             software: ["Figma"],
             link: "https://drive.google.com/drive/folders/1msevutM1CQLRmV6pY1H0S7ZnTaiZB6WD?usp=sharing",
-            background : "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
+            background : "/images/curhataja/background.jpeg",
             tools : 4,
             documentation : 4,
-            toolsused:["Figma","Visual Paradigm","Miro","Google Form"],
+            toolsused:["Figma"],
             features :["User Authentication","Chat Functionality","Voice and Video Calls","Appointment Scheduling","User Profile Management"],
             process: [
         {
+            title: "Brainstorming Ide",
+            description:
+            "Mengamati permasalahan yang ada untuk mencari sebuah solusi",
+        },
+        {
             title: "Requirement Gathering",
             description:
-            "Mengumpulkan kebutuhan bisnis dan user melalui interview stakeholder",
+            "Menganalisa Kebutuhan User dan fitur-fitur di dalam aplikasi",
         },
-        {
-            title: "Business Requirements Document",
-            description:
-            "Menyusun BRD yang mencakup scope, objectives, dan constraints",
-        },
-        {
-            title: "Use Case Diagram",
-            description:
-            "Membuat diagram use case untuk memetakan interaksi user dengan sistem",
-        },
-        {
-            title: "Wireframing",
-            description:
-            "Merancang wireframe low-fidelity untuk validasi konsep",
-        },
+
         {
             title: "UI/UX Design",
             description: 
@@ -40,9 +32,9 @@ export function dataProjects() {
         
         ],
             images: [
-                    "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
-                    "https://i.pinimg.com/1200x/8c/77/20/8c7720ee535fcaf3c108bb60ec9310cd.jpg",
-                    "https://i.pinimg.com/1200x/e5/7e/32/e57e3206fa458c41ffe495f8823c4c58.jpg",
+                    "/images/curhataja/Consultation.png",
+                    "/images/curhataja/Waiting room.png",
+                    "/images/curhataja/chatkonsul.png",
         ],
 
             links: {
