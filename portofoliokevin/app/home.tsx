@@ -1,4 +1,4 @@
-import { Mail,Linkedin} from "lucide-react"
+import { Mail,Linkedin,Github} from "lucide-react"
 import { ViewMyWorkScroll } from "./iteractive"
 import { ContactMeScroll } from "./iteractive"
 export default function Home() {
@@ -41,6 +41,13 @@ export default function Home() {
                 rel="noopener noreferrer"
                 >
                 <Linkedin className="text-gray-500 hover:text-sky-500 transition duration-300" size={35}></Linkedin>
+                </a>
+                <a 
+                href="https://github.com/kempinn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <Github className="text-gray-500 hover:text-sky-500 transition duration-300" size={35}></Github>
                 </a>
                 
             </div>

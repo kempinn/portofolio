@@ -3,29 +3,54 @@ import { dataCertificate } from "../dataCertificate";
 import { notFound } from "next/navigation";
 import { Wrench, FileText,Notebook,CircleDot, Star, Circle} from "lucide-react"
 import GetImages from "./getImages";
-import { div } from "framer-motion/m";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 
 interface Props {
     params: Promise<
     {slug:string}>
+    searchParams: Promise<{ from?: string }>;
 }
 
 
-export default async function ProjectDetails({params}:Props){
+export default async function ProjectDetails({params, searchParams}:Props){
     const {slug} = await params;
+    const { from } = await searchParams;
     const projects= dataProjects().find(item => item.slug === slug);
     if(!projects) return notFound();
+    
+    let backLink = "/showcase/all-projects";
+    let backText = "Back to All Projects";
+
+   if (from === "all") {
+        backLink = "/showcase/all-projects";
+        backText = "Back to All Projects";
+    } else if (from === "home") {
+        backLink = "/?tab=projects#projects";
+        backText = "Back to Showcase";
+    }
 
     return(
-    <div>
+    <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-14 pt-10">
+                <Link 
+                    href={backLink} 
+                    className="group inline-flex items-center gap-2 text-gray-500 hover:text-sky-500 transition-colors font-medium"
+                >
+                    <div className="p-2 rounded-full bg-gray-50 group-hover:bg-sky-50 transition-colors">
+                        <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+                    </div>
+                    <span>{backText}</span>
+                </Link>
+            </div>
         <section className="max-w-7xl mx-auto px-14 py-30">
             <div className="grid grid-cols-2 items-start gap-30">
                 <div>
                     <div>
                         <h1 className="text-slate-400 text-4xl font-bold mb-4 py-2">{projects.title}</h1>
                         <p className="text-gray-500 text-lg leading-relaxed">
-                        {projects.description}
+                        {projects.description2}
                         </p>
                     </div>
                     
@@ -81,7 +106,7 @@ export default async function ProjectDetails({params}:Props){
                     ))}
                     </div>
 
-                    <div className="flex flex-row gap-11 mt-10">
+                    <div className="flex flex-row gap-5 mt-10">
                         <CircleDot className="h-5 w-5 text-blue-300 " />
                         <p className="text-medium font-regular text-gray-500">
                             Build Process
@@ -89,11 +114,13 @@ export default async function ProjectDetails({params}:Props){
                     </div>
                         <div className="flex flex-col gap-6 mt-4">
                             {projects.process?.map((process, index) => (
-                            <div key={index} className="relative flex gap-6">
-                                <div className="w-4 h-4 rounded-full border-2 border-blue-500 bg-white mt-3" />
-                                {index !== projects.process.length && (
-                                <div className="w-px h-full bg-blue-200 mt-1" />
-                                 )}
+                            <div key={index} className="flex gap-6">
+                                <div className="flex flex-col items-center shrink-0">
+                                    <div className="w-4 h-4 rounded-full border-2 border-blue-500 bg-white z-10 mt-1.5" />
+                                        {index !== projects.process.length - 1 && (
+                                        <div className="w-px flex-1 bg-blue-200" />
+                                    )}
+                                </div>
                             <div>
                                 <h4 className="font-semibold text-gray-900">
                                     {process.title}
@@ -115,7 +142,7 @@ export default async function ProjectDetails({params}:Props){
                   <div>
                     <div className="w-full h-auto mt-8 bg-white rounded-2xl p-6 border border-gray-200 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]">
                         <h3 className="text-lg font-semibold mb-5 flex items-center gap-2 text-gray-500">
-                            <Star className="text-blue-500 w-6 h-6" /> Fitur yang Dirancang
+                            <Star className="text-blue-500 w-6 h-6" /> Designed Features
                         </h3>
                         {projects.features?.map((feature, index) => (
                             <div key={index} className="flex items-start gap-3 mb-4">

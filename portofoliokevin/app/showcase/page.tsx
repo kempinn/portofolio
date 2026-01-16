@@ -9,8 +9,7 @@ import {
   Briefcase, 
   Award 
 } from 'lucide-react';
-import ShowcaseButton from './projectmenu';
-import ShowcaseMenu from './projectmenu';
+import ShowcaseMenu from './all-projects/projectmenu';
 
 export default function Showcase() {
   return (

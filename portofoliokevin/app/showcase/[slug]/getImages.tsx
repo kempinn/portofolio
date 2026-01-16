@@ -16,7 +16,7 @@ const [showModal, setShowModal] = useState(false);
   // Auto Play
   useEffect(() => {
     // Jika sedang di-hover, jangan jalankan timer (Pause)
-    if (isHovered) return;
+    if (isHovered||showModal) return;
 
     const autoPlay = setInterval(() => {
       // Panggil logika Next secara otomatis
@@ -26,7 +26,7 @@ const [showModal, setShowModal] = useState(false);
 
     // Bersihkan timer saat komponen berubah (Clean up)
     return () => clearInterval(autoPlay)
-  }, [isHovered, images.length]); // Timer direset jika status hover berubah
+  }, [isHovered, showModal, images.length]); // Timer direset jika status hover berubah
   
   function prev() {
     setActive((prev) => prev === 0 ? images.length - 1 : prev - 1
@@ -111,12 +111,12 @@ const [showModal, setShowModal] = useState(false);
       
       {/* Printilan gambar bawah*/}
         {images.length > 1 && (
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-3 gap-5">
             {images.map((img, index) => (
               <button 
               key={index}
               onClick={() => handlerImages(index)}
-              className={`relative mt-15 rounded-xl overflow-hidden aspect-video cursor-pointer transition-all ${index===active ? "ring-2 ring-blue-500 ring-offset-2 opacity-100 scale-105" : "opacity-60 hover:opacity-100 hover:scale-105" }`}>
+              className={`bg-gray-100 relative mt-5 rounded-xl overflow-hidden aspect-video cursor-pointer transition-all ${index===active ? "ring-2 ring-blue-500 ring-offset-2 opacity-100 scale-105" : "opacity-60 hover:opacity-100 hover:scale-105" }`}>
                 <img 
                 src={img}
                 alt={`Thumbnail ${index + 1}`} 

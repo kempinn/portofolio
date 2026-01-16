@@ -1,6 +1,5 @@
 "use client"
 
-import { div } from "framer-motion/m"
 import { dataCertificate } from "./dataCertificate";
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion";
