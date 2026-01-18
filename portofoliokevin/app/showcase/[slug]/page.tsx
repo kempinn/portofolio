@@ -32,31 +32,35 @@ export default async function ProjectDetails({params, searchParams}:Props){
     }
 
     return(
-    <div className="bg-white">
-        <div className="max-w-7xl mx-auto px-14 pt-10">
+    <div className="font-sans bg-white font-sans">
+        {/* Header - Responsif padding samping */}
+        <div className="max-w-7xl mx-auto px-6 md:px-14 pt-16 font-sans">
                 <Link 
-                    href={backLink} 
-                    className="group inline-flex items-center gap-2 text-gray-500 hover:text-sky-500 transition-colors font-medium"
-                >
-                    <div className="p-2 rounded-full bg-gray-50 group-hover:bg-sky-50 transition-colors">
-                        <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-                    </div>
-                    <span>{backText}</span>
+                href={backLink}
+                className="group inline-flex items-center gap-2 text-gray-500 hover:text-sky-500 transition-colors font-medium"
+                 >
+                <div className="p-1 rounded-full bg-gray-100 group-hover:bg-sky-100 transition-colors">
+                    <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+                </div>
+                <span >{backText}</span>
                 </Link>
             </div>
-        <section className="max-w-7xl mx-auto px-14 py-30">
-            <div className="grid grid-cols-2 items-start gap-30">
-                <div>
+
+        {/* Section - grid-cols-1 untuk HP/Tablet, grid-cols-2 untuk Laptop */}
+        <section className="max-w-7xl mx-auto px-6 -mt-10 md:px-14 py-16 md:py-30">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-10 lg:gap-30">
+                {/* Kolom Kiri - Order-2 di HP agar gambar muncul duluan */}
+                <div className="order-2 lg:order-1">
                     <div>
-                        <h1 className="text-slate-400 text-4xl font-bold mb-4 py-2">{projects.title}</h1>
+                        <h1 className="text-slate-400 text-3xl md:text-4xl font-bold mb-4 py-2">{projects.title}</h1>
                         <p className="text-gray-500 text-lg leading-relaxed">
                         {projects.description2}
                         </p>
                     </div>
                     
-                    <div className="flex items-start gap-4 mt-7">
-                        {/*card technologies*/}
-                        <div className="flex flex-1 items-center h-20 gap-4 rounded-2xl border border-gray-200 bg-white shadow-sm">
+                    {/* card technologies - flex-col di HP agar tidak meluap */}
+                    <div className="flex flex-col sm:flex-row items-start gap-4 mt-7">
+                        <div className="flex flex-1 w-full items-center h-20 gap-4 rounded-2xl border border-gray-200 bg-white shadow-sm">
                             <div className="flex h-12 w-12 items-center ml-5 justify-center rounded-xl bg-blue-50 text-blue-500">
                                 <Wrench className="flex items-center h-6 w-6" />
                             </div>
@@ -64,9 +68,8 @@ export default async function ProjectDetails({params, searchParams}:Props){
                                 <h3 className="text-xl font-semibold text-gray-900">{projects.tools}</h3>
                                 <p className="text-sm text-gray-500">Tools</p>
                             </div>
-                            
                         </div>
-                         <div className="flex flex-1 items-center h-20 gap-4 rounded-2xl border border-gray-200 bg-white shadow-sm">
+                         <div className="flex flex-1 w-full items-center h-20 gap-4 rounded-2xl border border-gray-200 bg-white shadow-sm">
                             <div className="flex h-12 w-12 items-center ml-5 justify-center rounded-xl bg-blue-50 text-blue-500">
                                 <FileText className="flex items-center h-6 w-6" />
                             </div>
@@ -74,30 +77,31 @@ export default async function ProjectDetails({params, searchParams}:Props){
                                 <h3 className="text-xl font-semibold text-gray-900">{projects.documentation}</h3>
                                 <p className="text-sm text-gray-500">Documentations</p>
                             </div>
-                            
                         </div>
                     </div>
+
                     <div>
                         <a 
-                        href={projects.link} // Mengambil link dari array dataProjects secara otomatis
+                        href={projects.link}
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-block"
+                        className="inline-block w-full sm:w-auto"
                         >
-                        <button className="group flex items-center justify-center bg-sky-500 mt-4 text-white px-5 py-2 rounded-2xl hover:bg-sky-600 transition duration-300">
+                        <button className="group flex w-full sm:w-auto items-center justify-center bg-sky-500 mt-4 text-white px-5 py-2 rounded-2xl hover:bg-sky-600 transition duration-300">
                         <Notebook className="h-5 w-5 mr-2 text-white group-hover:text-white"/>
-                        <p className="text-white group-hover:text-white">Documentation</p>
+                        <p className="text-white group-hover:text-white cursor-pointer">Documentation</p>
                         </button>
                         </a>
                     </div>
-                    <div className="flex flex-row gap-2 mt-10">
+
+                    <div className="flex flex-row gap-5 mt-10">
                         <Wrench className="h-6 w-6 text-blue-300" />
-                        <p className="text-medium font-regular text-gray-500">
+                        <p className="text-medium font-semibold text-gray-500">
                             Used Tools
                         </p>
                     </div>
                     
-                    <div className="flex flex-wrap flex-1 gap-2 mt-3">
+                    <div className="flex flex-wrap gap-2 mt-3">
                     {projects.toolsused?.map((toolused, index) => (
                         <div key={index} className="group inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200 px-4 py-1.5 hover:bg-blue-100 transition duration-300">
                         <Wrench className="h-3 w-3 text-sky-500" />
@@ -108,36 +112,34 @@ export default async function ProjectDetails({params, searchParams}:Props){
 
                     <div className="flex flex-row gap-5 mt-10">
                         <CircleDot className="h-5 w-5 text-blue-300 " />
-                        <p className="text-medium font-regular text-gray-500">
+                        <p className="font-sans text-medium font-semibold text-gray-500">
                             Build Process
                         </p>
                     </div>
-                        <div className="flex flex-col gap-6 mt-4">
-                            {projects.process?.map((process, index) => (
-                            <div key={index} className="flex gap-6">
-                                <div className="flex flex-col items-center shrink-0">
-                                    <div className="w-4 h-4 rounded-full border-2 border-blue-500 bg-white z-10 mt-1.5" />
-                                        {index !== projects.process.length - 1 && (
-                                        <div className="w-px flex-1 bg-blue-200" />
-                                    )}
-                                </div>
+                    <div className="flex flex-col gap-6 mt-4">
+                        {projects.process?.map((process, index) => (
+                        <div key={index} className="flex gap-6">
+                            <div className="flex flex-col items-center shrink-0">
+                                <div className="w-4 h-4 rounded-full border-2 border-blue-500 bg-white z-10 mt-1.5" />
+                                    {index !== projects.process.length - 1 && (
+                                    <div className="w-px flex-1 bg-blue-200" />
+                                )}
+                            </div>
                             <div>
-                                <h4 className="font-semibold text-gray-900">
+                                <h4 className="font-semibold text-gray-600">
                                     {process.title}
                                 </h4>
                                 <p className="text-sm text-gray-500 mt-1">
                                     {process.description}
                                 </p>
                             </div>
-                            </div>
-                             ))}
-                    
-
+                        </div>
+                         ))}
                     </div>
-                    
                 </div>
                 
-                <div>
+                {/* Kolom Kanan - Order-1 di HP agar Gambar di atas */}
+                <div className="order-1 lg:order-2">
                   {projects.images && <GetImages images={projects.images} /> }
                   <div>
                     <div className="w-full h-auto mt-8 bg-white rounded-2xl p-6 border border-gray-200 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.1)]">
@@ -155,8 +157,6 @@ export default async function ProjectDetails({params, searchParams}:Props){
                     </div>
                 </div>
                 </div>
-                 
-                 
             </div>  
         </section>
     </div>

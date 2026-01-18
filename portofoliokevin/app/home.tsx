@@ -1,62 +1,77 @@
-import { Mail,Linkedin,Github} from "lucide-react"
-import { ViewMyWorkScroll } from "./iteractive"
-import { ContactMeScroll } from "./iteractive"
-export default function Home() {
+import { Mail, Linkedin, Github } from "lucide-react";
+import { ViewMyWorkScroll } from "./iteractive";
+import { ContactMeScroll } from "./iteractive";
 
+export default function Home() {
     return (
-        <div id="Home" className="relative flex flex-col justify-center items-center py-35 space-y-5 border-b-2 border-sky-500 min-h-screen w-full" >
-            <h1 className="text-2xl text-center text-sky-500 font-semibold">
-                Welcome to My Portofolio
-            </h1>
-            <h1 className="text-8xl text-center space-y-3">
-                <span className="block text-slate-300 font-bold">
+        <div id="Home" className="font-sans relative flex flex-col justify-center items-center py-20 md:py-32 px-6 space-y-8 min-h-screen w-full overflow-hidden">
+            
+            {/* Sub-heading: Responsif dari text-lg ke text-2xl */}
+            <h2 className="text-lg md:text-2xl text-center text-sky-500 font-semibold tracking-wide">
+                Welcome to My Portfolio
+            </h2>
+
+            {/* Main Title: 
+                - text-4xl di HP (agar tidak overflow)
+                - text-6xl di Tablet
+                - text-8xl di Laptop 
+            */}
+            <h1 className="text-4xl sm:text-6xl md:text-8xl text-center leading-tight flex flex-col gap-2">
+                <span className="text-slate-300 font-bold">
                     Business Analyst
                 </span>
-                <span className="block text-sky-300 font-bold">
+                <span className="text-sky-300 font-bold">
                     and Data Analyst
                 </span>
             </h1>
-            <h1 className ="text-xl font-semibold text-gray-400 py-10">
-                <span className ="block text-center">
-                    Driving business growth through 
-                </span>
-                <span className="block text-center">
-                    strategic analysis, data-driven insights, and process optimization.
-                </span>
-            </h1>
+
+            {/* Description: 
+                - max-w-2xl agar teks tidak terlalu lebar di monitor besar
+                - text-base di HP, text-xl di Laptop 
+            */}
+            <div className="max-w-2xl text-center space-y-1 py-6 md:py-10">
+                <p className="text-base md:text-xl font-medium text-gray-400 leading-relaxed">
+                    Driving business growth through strategic analysis, 
+                    <span className="md:block"> data-driven insights, and process optimization.</span>
+                </p>
+            </div>
             
-            <div className="flex items-center justify-center gap-4">
+            {/* Buttons: flex-col di HP agar tidak sempit, md:flex-row di Laptop */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
                 <ViewMyWorkScroll />
                 <ContactMeScroll />
             </div>
             
-            <div className="flex items-center justify-center mt-5 gap-5 cursor-pointer text-sky-500 ">
-            
-                <a href="mailto:akunbuatskola@gmail.com">
-                <Mail className="text-gray-500 hover:text-sky-500 transition duration-300" size={35}></Mail>
+            {/* Social Media Links */}
+            <div className="flex items-center justify-center mt-8 gap-6 text-gray-500">
+                <a href="mailto:akunbuatskola@gmail.com" aria-label="Email" className="hover:text-sky-500 transition-all duration-300 hover:scale-110">
+                    <Mail size={30} />
                 </a>
                 <a 
-                href="https://www.linkedin.com/in/portokevin/"
-                target="_blank"
-                rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/portokevin/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="hover:text-sky-500 transition-all duration-300 hover:scale-110"
                 >
-                <Linkedin className="text-gray-500 hover:text-sky-500 transition duration-300" size={35}></Linkedin>
+                    <Linkedin size={30} />
                 </a>
                 <a 
-                href="https://github.com/kempinn/"
-                target="_blank"
-                rel="noopener noreferrer"
+                    href="https://github.com/kempinn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    className="hover:text-sky-500 transition-all duration-300 hover:scale-110"
                 >
-                <Github className="text-gray-500 hover:text-sky-500 transition duration-300" size={35}></Github>
+                    <Github size={30} />
                 </a>
-                
             </div>
-
-            <div className=" relative z-10 flex justify-center mt-5">
-                <div className="relative z-10 w-6 h-10 border-2 border-sky-300 rounded-full flex justify-center animate-bounce">
-                    <div className="relative z-10 w-1 h-2 bg-sky-500 rounded-full mt-2 animate-bounce"></div>
-                    </div>
+            {/* Scroll Down Indicator */}
+            <div className="flex justify-center mt-12">
+                <div className="w-6 h-10 border-2 border-sky-300 rounded-full flex justify-center p-1">
+                    <div className="w-1 h-2 bg-sky-500 rounded-full animate-bounce"></div>
                 </div>
-         </div>
-    )
+            </div>
+        </div>
+    );
 }

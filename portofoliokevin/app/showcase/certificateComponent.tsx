@@ -3,16 +3,16 @@
 import { dataCertificate } from "./dataCertificate";
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckCircle2, Building2, Calendar,X, ExternalLink,FileText } from "lucide-react";
-
+import { CheckCircle2, Building2, Calendar, X, ExternalLink, FileText } from "lucide-react";
 
 export default function CardCertificate(){
 const certification = dataCertificate();
 const[selectedCertificate, setSelectedCertificate] = useState<any>(null);
 
     return(
-    <section className="py-20 px-6 gap max-w-6xl mx-auto bg-gray-50/50">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <section className="font-sans -mt-15 py-12 md:py-20 px-4 sm:px-6 max-w-6xl mx-auto bg-gray-50/50">
+        {/* Grid: 1 kolom di HP, 2 di Tablet, 3 di Laptop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {certification.map((certi)=>(
         <motion.div
         key ={certi.id}
@@ -33,12 +33,12 @@ const[selectedCertificate, setSelectedCertificate] = useState<any>(null);
             </h3>
 
             <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
-                <Building2 className="w-4 h-4" />
-                <span>{certi.issued}</span>
+                <Building2 className="w-4 h-4 shrink-0" />
+                <span className="truncate">{certi.issued}</span>
             </div>
             
             <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-                <Calendar className="w-4 h-4" />
+                <Calendar className="w-4 h-4 shrink-0" />
                 <span>{certi.date}</span>
             </div>
 
@@ -59,6 +59,7 @@ const[selectedCertificate, setSelectedCertificate] = useState<any>(null);
         ))}
 
         </div>
+
         <AnimatePresence>
           {selectedCertificate && (
             <>
@@ -69,10 +70,11 @@ const[selectedCertificate, setSelectedCertificate] = useState<any>(null);
             onClick={() => setSelectedCertificate(null)}
             className="fixed inset-0 bg-black/60 z-50 backdrop-blur-sm"/>
 
+            {/* Modal Container: P-4 agar tidak menempel ke pinggir layar HP */}
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
               <motion.div
                 layoutId={`card-${selectedCertificate.id}`}
-                className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden pointer-events-auto relative">
+                className="bg-white w-full max-w-2xl max-h-[90vh] rounded-2xl shadow-2xl overflow-y-auto pointer-events-auto relative">
               
                 <button
                   onClick={() => setSelectedCertificate(null)}
@@ -81,45 +83,39 @@ const[selectedCertificate, setSelectedCertificate] = useState<any>(null);
                   <X className="w-5 h-5 text-gray-500" />
                 </button>
 
-                <div className="p-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className={`p-4 rounded-2xl ${selectedCertificate.iconColor} scale-110`}>
+                {/* Modal Content: Padding responsif (p-6 di HP, p-8 di Desktop) */}
+                <div className="p-6 md:p-10">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 text-center sm:text-left">
+                    <div className={`p-4 rounded-2xl ${selectedCertificate.iconColor} scale-110 shrink-0`}>
                       {selectedCertificate.icon}
                     </div>
 
-                    <div>
-                      <h2 className="text-lg font-bold text-gray-500">{selectedCertificate.slug}</h2>
+                    <div className="min-w-0">
+                      <h2 className="text-xl font-bold text-gray-500 leading-tight">{selectedCertificate.slug}</h2>
                       
-                      <div className="flex flex-col gap-2 text-gray-500 mt-1">
-                        
-                        <div className="flex items-start gap-2">
-                          <Building2 className="w-5 h-5" />
+                      <div className="flex flex-col gap-2 text-gray-500 mt-3 text-sm md:text-base">
+                        <div className="flex items-center justify-center sm:justify-start gap-2">
+                          <Building2 className="w-5 h-5 shrink-0" />
                           <span>Issued by {selectedCertificate.issued}</span>
                         </div>
 
-                        <div className="flex items-start gap-2">
-                          <Calendar className="w-5 h-5" />
+                        <div className="flex items-center justify-center sm:justify-start gap-2">
+                          <Calendar className="w-5 h-5 shrink-0" />
                           <span>{selectedCertificate.date}</span>
                         </div>
-                    
-
-                        
                       </div>
                     </div>
                   </div>
 
-                    <div className="flex items-center gap-3 w-full">
-                      
-                      <FileText className="w-7 h-7 text-gray-400" />
-                      <div className="w-full min-w-0">
-                        <p className="w-full text-sm font-semibold text-gray-800">{selectedCertificate.Description}</p>
-                      </div>
-
+                  {/* Description Box */}
+                  <div className="flex items-start gap-3 w-full bg-gray-50 p-4 rounded-xl mb-6">
+                    <FileText className="w-6 h-6 text-gray-400 shrink-0 mt-1" />
+                    <div className="min-w-0">
+                      <p className="text-sm font-semibold text-gray-800 leading-snug">{selectedCertificate.Description}</p>
                     </div>
-
+                  </div>
                   
-                  
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-8">
                         {selectedCertificate.description}
                   </p>
 
@@ -130,19 +126,19 @@ const[selectedCertificate, setSelectedCertificate] = useState<any>(null);
                        {selectedCertificate.skills_act.map((skill: string, idx: number) => (
                           <span
                           key={idx}
-                          className={`px-3 py-1.5 ${selectedCertificate.skillColor} text-sm font-medium rounded-full`}
+                          className={`px-3 py-1.5 ${selectedCertificate.skillColor} text-xs md:text-sm font-medium rounded-full`}
                           >
                           {skill}
                           </span>
                           ))}
                       </div>
-                  
                   </div>
+
                   <a 
                         href={selectedCertificate.link}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center justify-center gap-2 w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200"
+                        className="h-auto flex items-center justify-center gap-2 w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-lg shadow-sky-100"
                     >
                         Verify Certificate
                         <ExternalLink className="w-4 h-4" />
@@ -152,9 +148,7 @@ const[selectedCertificate, setSelectedCertificate] = useState<any>(null);
               </motion.div>
             </div>
             </>
-            
           )}
-          
         </AnimatePresence>
     </section>
     )

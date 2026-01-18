@@ -14,7 +14,7 @@ export function GetMeScroll() {
 
   return (
    <button 
-      className="flex items-center justify-center bg-sky-500 text-white px-6 py-2 rounded-xl full hover:bg-sky-600 transition duration-300"
+      className="flex items-center justify-center bg-sky-500 text-white px-6 py-2 rounded-xl full hover:bg-sky-600 transition duration-300 cursor-pointer"
       onClick={aboutme}>
        Get Me
    </button>
@@ -32,7 +32,7 @@ export function HomeScroll(){
     }
 };
    return (
-      <button className="text-zinc-500 hover:text-sky-500 font-medium" onClick={scrollToHome} >
+      <button className="text-zinc-500 hover:text-sky-500 font-medium cursor-pointer" onClick={scrollToHome} >
        Home
       </button>
    )
@@ -47,7 +47,7 @@ export function ShowcaseScroll(){
     }
 };
       return ( 
-         <button className="text-zinc-500 hover:text-sky-500 font-medium" onClick={scrollToShowcase} >
+         <button className="text-zinc-500 hover:text-sky-500 font-medium cursor-pointer" onClick={scrollToShowcase} >
             Showcase
          </button>
 )
@@ -62,7 +62,7 @@ export function AboutmeScroll(){
     }
 };
    return (
-      <button className="text-zinc-500 hover:text-sky-500 font-medium" onClick={scrollToAbout}>
+      <button className="text-zinc-500 hover:text-sky-500 font-medium cursor-pointer" onClick={scrollToAbout}>
          About Me
       </button>
    )
@@ -80,7 +80,7 @@ export function ViewMyWorkScroll(){
    return (
       <button 
          onClick={ScrollingViewMyWork}
-         className="group flex items-center justify-center bg-sky-500 text-white px-5 py-2 rounded-lg full hover:bg-sky-600 transition duration-300">
+         className="group flex items-center justify-center bg-sky-500 text-white px-5 py-2 rounded-lg full hover:bg-sky-600 transition duration-300 cursor-pointer">
          View my Work
          <ArrowRight className="ml-3 scale-x-110 transition-transform duration-300 group-hover:translate-x-1"/>
          </button>
@@ -98,7 +98,7 @@ export function ContactMeScroll(){
    return (
       <button
          onClick={scrollToContact} 
-         className="flex items-center justify-center bg-sky-300 text-white px-5 py-2 rounded-lg full hover:bg-sky-600 transition duration-300">
+         className="flex items-center justify-center bg-sky-300 text-white px-5 py-2 rounded-lg full hover:bg-sky-600 transition duration-300 cursor-pointer">
          Contact me
       </button>
    )

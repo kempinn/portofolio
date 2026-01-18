@@ -13,7 +13,7 @@ import ShowcaseMenu from './all-projects/projectmenu';
 
 export default function Showcase() {
   return (
-    <div id='Showcase' className="min-h-screen bg-white font-sans text-gray-900 pb-20">
+    <div id='Showcase' className="font-sans min-h-screen bg-white font-sans text-gray-900 pb-20">
       
       {/* Background Gradient Decoration */}
       <div className="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-blue-50/50 to-transparent -z-10 pointer-events-none" />

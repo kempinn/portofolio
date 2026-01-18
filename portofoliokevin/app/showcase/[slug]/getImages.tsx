@@ -67,24 +67,24 @@ const [showModal, setShowModal] = useState(false);
   if (!images || images.length === 0) return null;
 
   return (
-    <div className="w-full h-auto relative">
+    <div className="font-sans w-full h-auto relative">
       <div className="w-full relative group aspect-video overflow-hidden rounded-2xl bg-gray-100">
         <button
           onClick={prev}
           className="absolute left-5 top-4/7 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition opacity-0 group-hover:opacity-100"
         >
-          <ChevronLeft className="text-black"/>
+          <ChevronLeft className="text-black cursor-pointer"/>
         </button>
       
         <button 
           onClick={next}
           className="absolute right-5 top-4/7 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition opacity-0 group-hover:opacity-100">
-          <ChevronRight className="text-black" />
+          <ChevronRight className="text-black cursor-pointer" />
         </button>
 
         <button 
         onClick={() => setShowModal(true)}
-        className="absolute top-4/7 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 bg-white text-gray-500 px-5 py-1 rounded-full font-medium shadow-lg hover:bg-gray-100 hover:scale-105 transition-transform">
+        className="cursor-pointer absolute top-4/7 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 bg-white text-gray-500 px-5 py-1 rounded-full font-medium shadow-lg hover:bg-gray-100 hover:scale-105 transition-transform">
           Click to Preview
         </button>
         <AnimatePresence initial={false} custom={direction}>

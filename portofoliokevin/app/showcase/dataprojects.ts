@@ -337,6 +337,47 @@ export function dataProjects() {
         ]
 
         }
+        ,
+        {
+            slug: "portfolio-kevin",
+            title: "My Portfolio Website",
+            description:"Using css and jsx to create my personal portfolio website with nextjs as a framework.",
+            description2:"This project focuses on Extract, Transform, and Load (ETL) streetwear sales data using Pentaho to integrate multiple data sources into a centralized repository. Developed as an assignment for the Marketing Intelligence course, the project uses dummy data modeled after the operations of one of the largest streetwear companies in Indonesia. The analysis examines the impact of marketing companies on consumer purchasing power across different regions and identifies the most effective marketing tools for various demographic segments, including age, income level, and geographic location. The results aim to support data-driven marketing decisions and improve targeting strategies to enhance sales performance.",
+            software:["Visual Paradigm","Github"],
+            link: "https://github.com/kempinn",
+            background : "/images/etl/etllogo1.jpg",
+            tools : 2,
+            documentation : 1,
+            toolsused:["Visual Paradigm","Github"],
+            features :["Iteractive and Responsive Design"],
+            process: [
+        {
+            title: "Instalation Text Editor",
+            description:
+            "Instalation Visual Studio Code as a text editor.",
+        },
+        {
+            title: "Instalation Dependencies and Library",
+            description: 
+            "Instalation Nextjs, React, Tailwindcss, and other required dependencies using npm.",
+        },
+         
+        {
+            title: "Instalation Github Repository",
+            description: 
+            "Make a repository on Github and connect with local project.",
+        },
+ 
+       
+        ],
+            images: [
+                    "/images/etl/etl1.jpg",
+                    "/images/etl/etl4.png",
+                    "/images/etl/etl2.jpg",
+                    "/images/etl/etl3.jpg"       
+        ]
+
+        }
         
     ];
 
