@@ -44,7 +44,7 @@ const[selectedCertificate, setSelectedCertificate] = useState<any>(null);
 
             <div className="flex flex-wrap gap-2 mt-auto">
               {certi.skills_act.slice(0, 3).map((skill, idx) => (
-                <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">
+                <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-500 text-xs font-medium rounded-full">
                   {skill}
                 </span>
               ))}

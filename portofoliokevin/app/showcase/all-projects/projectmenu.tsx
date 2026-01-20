@@ -76,9 +76,10 @@ export default function ShowcaseMenu() {
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-blue-500" style={{ width: '90%' }}></div></div>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Visual Paradigm</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Draw IO</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">UML Diagram</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Visual Paradigm</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Draw IO</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">UML Diagram</span>
+                   <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Excel</span>
                 </div>
               </div>
 
@@ -94,7 +95,7 @@ export default function ShowcaseMenu() {
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-pink-500" style={{ width: '90%' }}></div></div>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Figma</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Figma</span>
                 </div>
               </div>
 
@@ -110,9 +111,10 @@ export default function ShowcaseMenu() {
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-emerald-500" style={{ width: '80%' }}></div></div>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">PostgreSQL</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">MySQL</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">SSMS</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">PostgreSQL</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">MySQL</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">SSMS</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Excel</span>
                 </div>
               </div>
 
@@ -128,7 +130,7 @@ export default function ShowcaseMenu() {
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-orange-500" style={{ width: '80%' }}></div></div>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Excel</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Excel</span>
                 </div>
               </div>
 
@@ -144,8 +146,9 @@ export default function ShowcaseMenu() {
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-indigo-500" style={{ width: '78%' }}></div></div>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Tableau</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Power BI</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Tableau</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Power BI</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">DrawIO</span>
                 </div>
               </div>
 
@@ -161,8 +164,8 @@ export default function ShowcaseMenu() {
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-rose-500" style={{ width: '86%' }}></div></div>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Redmine</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Excel</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Redmine</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Excel</span>
                 </div>
               </div>
 
@@ -178,8 +181,8 @@ export default function ShowcaseMenu() {
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-teal-500" style={{ width: '30%' }}></div></div>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Neo4J</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Cassandra</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Neo4J</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Cassandra</span>
                 </div>
               </div>
 
@@ -195,7 +198,7 @@ export default function ShowcaseMenu() {
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-cyan-500" style={{ width: '30%' }}></div></div>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Pentaho</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Pentaho</span>
                 </div>
               </div>
 
@@ -211,13 +214,13 @@ export default function ShowcaseMenu() {
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-violet-500" style={{ width: '50%' }}></div></div>
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Next.js</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">JavaGUI</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Github</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Jasper Report</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">Report Printer</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">JSX</span>
-                  <span className="px-3 py-1 bg-gray-50 text-gray-500 text-xs rounded-full border border-gray-100">CSS</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Next.js</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">JavaGUI</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Github</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Jasper Report</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Report Printer</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">JSX</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">TailwindCSS</span>
                 </div>
               </div>
 
@@ -248,7 +251,7 @@ export default function ShowcaseMenu() {
                         <p className="text-sm text-gray-500 mb-4 line-clamp-2">{project.description}</p>
                         <div className="flex gap-2 flex-wrap mt-auto">
                           {project.software.map((software, idx) => (
-                            <span key={idx} className="px-3 py-1 bg-gray-50 text-[10px] font-medium text-gray-500 rounded-full border border-gray-100">{software}</span>
+                            <span key={idx} className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">{software}</span>
                           ))}
                         </div>
                       </div>
