@@ -3,7 +3,7 @@ import { sendEmail } from "./showcase/action"
 
 export default function ContactForm() {
     return (
-        <div className="font-sans px-6 pb-20" id="AboutMe">
+        <div className="bg-white font-sans px-6 pb-20" id="AboutMe">
             {/* Header Section */}
             <div className="text-center">
                 <h1 className="flex justify-center mx-auto text-3xl md:text-4xl font-bold text-center text-slate-400 pt-20 pb-10">

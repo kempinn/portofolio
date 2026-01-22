@@ -1,8 +1,11 @@
 import { Briefcase, Users, Award, Download } from "lucide-react";
 
+
+
 export default function About() {
   return (
     <div id="About" className="font-sans min-h-screen bg-white">
+
       {/* Header Section */}
       <div className="text-center py-3 md:py-10">
         <h1 className="text-3xl md:text-4xl font-bold text-slate-400">

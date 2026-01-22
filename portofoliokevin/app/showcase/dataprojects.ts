@@ -148,7 +148,14 @@ export function dataProjects() {
             slug: "sakjose",
             title: "SakJose",
             description:"SakJose is a desktop cashier system for managing PlayStation (PS3/PS4/PS5) rentals in internet cafés. ",
-            description2:"SakJose is a desktop-based cashier system designed to manage PlayStation (PS3/PS4/PS5) rentals in internet cafés. The user interface is intended solely for staff, as customer reservations are handled in person or through Instagram and WhatsApp chats. The idea was developed through a brainstorming session when the internet café industry was trending, followed by interviews with several MSME (UMKM) owners to understand their business processes and define system feature requirements to help streamline operations. This project was a group final project for the Business Application Design course, consisting of four members, with me serving as the team leader. My role included creating the conceptual, logical, and physical entity-relationship diagrams, as well as developing both the frontend and backend processes.",
+            description2:[
+                "SakJose is a desktop-based cashier system designed to manage PlayStation (PS3, PS4, and PS5) rentals in internet cafés. The user interface is intended solely for staff use, as customer reservations are handled in person or through Instagram and WhatsApp chats. This project was a group final project for the Business Application Design course, consisting of four members, with me serving as the team leader.",
+                "The idea was developed through a brainstorming session when the internet café industry was trending, followed by interviews with several MSME owners to understand their business processes and define system feature requirements to help streamline operations.",
+                "My role included creating the conceptual, logical, and physical entity-relationship diagrams, as well as developing both the frontend and backend processes.",
+                "Through this project, I learned object-oriented programming concepts such as encapsulation, polymorphism, abstraction, and inheritance. In addition, during the development of the Java-based GUI, it was essential to establish relationships between entities across conceptual, logical, and physical stages. This approach ensured that data transfer from the Java GUI to the database was effective and efficient, maintaining data continuity and relevance while avoiding overload or redundancy",
+                "This was my first experience developing a complete application and learning frontend concepts through Java GUI development, as well as backend concepts through database integration. I also learned that when data is entered through the GUI, Eclipse provides reports that can be directly accessed and analyzed. We also utilized Jasper Reports to generate and manage system reports.",
+
+            ],
             software:["System Design","Programming","Relational Database","Non-Relational Database"],
             link: "https://drive.google.com/drive/folders/1_pPF2ABiPbolYQBOHSg7t8ePNhZVZiVm?usp=sharing",
             background : "/images/sakjose/logo.jpg",
@@ -220,7 +227,11 @@ export function dataProjects() {
             slug: "dashboard-covid19",
             title: "Dashboard Covid-19",
             description:"Visualizing Covid-19 data in Indonesia using Power BI to provide insights into the pandemic's trends and impact.",
-            description2:"This project focuses on visualizing COVID-19 data in Indonesia using Power BI to provide insights into the pandemic’s trends and overall impact. It was a small assignment for the Marketing Intelligence course, where I took the role of data visualizer by gathering data from official government websites and transforming it into interactive visualizations, including case spread, recoveries, deaths, and vaccination rates using various charts and graphs. The project was intended as a hands-on exercise to deepen my data visualization skills, and at the time, COVID-19 data was chosen because it was easily accessible and offered many variables suitable for meaningful and informative visual analysis.",
+            description2:[
+                "This project focuses on visualizing COVID-19 data in Indonesia using Power BI to provide insights into the pandemic’s trends and overall impact. It was a small assignment for the Marketing Intelligence course, where I took the role of data visualizer by gathering data from official government websites and transforming it into interactive visualizations, including case distribution, recovery rates, death cases, and vaccination progress through various charts and graphs.",
+                "The project was intended as a hands-on exercise to deepen my data visualization skills, and COVID-19 data was selected because it was easily accessible and offered a wide range of variables suitable for meaningful and informative visual analysis.",
+                "This was my first experience working on a full data visualization process and my first time learning and using data visualization tools. Through this project, I gained a foundational understanding of how to transform raw data into clear and insightful visual representations",
+            ],
             software:["Data Visualization","Relational Database"],
             link: "https://app.powerbi.com/groups/me/reports/e429046f-651d-43af-bf58-b6e42d9776ad/fa02133848caa17097b5?ctid=3485b963-82ba-4a6f-810f-b5cc226ff898&experience=power-bi",
             background : "/images/dashboardcovid/logo.jpg",
@@ -269,7 +280,12 @@ export function dataProjects() {
             slug: "dashboard-streetwearshop-sales",
             title: "Dashboard Streetwear Shop Sales",
             description:"Visualizing Streetwear Sales data using Tableau to provide insights into the pandemic's trends and impact.",
-            description2:"Visualizing Streetwear Sales Data Using Tableau to Uncover which store that have most transaction.This project is an assignment for the Marketing Intelligence course, using dummy data modeled after the business operations of one of the largest streetwear companies in Indonesia.",
+            description2:[
+                "This project focuses on visualizing streetwear sales data using Tableau to identify which stores generate the highest number of transactions. It was developed as an assignment for the Marketing Intelligence course, using dummy data modeled after the business operations of one of the largest streetwear companies in Indonesia.",
+                "The project was designed as a hands-on exercise to strengthen my data visualization and analytical skills. I chose this business process because it is relatively simple to model and visualize, while still being highly relevant for analyzing marketing performance and transaction trends. The streetwear industry was particularly suitable for this project because its marketing strategies are closely related to social media platforms commonly used by young audiences, making the data easier to structure and more meaningful to analyze.",
+                "This was my second experience working on a full data visualization process and had change strengthening my capability in visualisation data. Through this project, I do improvement in visualization skills by deeply understanding of how to transform raw data into clear and insightful visual representations. I als learn another data visualization tools"
+            ],
+
             software:["Data Visualization","Relational Database"],
             link: "https://drive.google.com/drive/folders/1NU8qcw62lOrxvovOjaYnQqW9cdtrZej5?usp=drive_link.",
             background : "/images/streetwearshop/logo1.jpg",
@@ -306,7 +322,12 @@ export function dataProjects() {
             slug: "etl-streetwearshop-sales",
             title: "Extract, Transform, Load Streetwear Shop Sales",
             description:"Extract, Transform, and Load Streetwear Sales data using Pentaho to Integrate data into one main repository.",
-            description2:"This project focuses on Extract, Transform, and Load (ETL) streetwear sales data using Pentaho to integrate multiple data sources into a centralized repository. Developed as an assignment for the Marketing Intelligence course, the project uses dummy data modeled after the operations of one of the largest streetwear companies in Indonesia. The analysis examines the impact of marketing companies on consumer purchasing power across different regions and identifies the most effective marketing tools for various demographic segments, including age, income level, and geographic location. The results aim to support data-driven marketing decisions and improve targeting strategies to enhance sales performance.",
+            description2:[
+                "This project focuses on Extract, Transform, and Load (ETL) streetwear sales data using Pentaho to integrate multiple data sources into a centralized repository.",
+                "Developed as an assignment for the Marketing Intelligence course, the project uses dummy data modeled after the operations of one of the largest streetwear companies in Indonesia. The analysis examines the impact of marketing companies on consumer purchasing power across different regions and identifies the most effective marketing tools for various demographic segments, including age, income level, and geographic location. The results aim to support data-driven marketing decisions and improve targeting strategies to enhance sales performance.",
+                "I had my first experience to know about data warehouse is in this project, before this, i just know the theory, not the practical implementation. I learned how to suit the data to make a migration smooth."
+            ],
+
             software:["Extract, Transform, Load (ETL)","Relational Database"],
             link: "https://drive.google.com/drive/folders/1GV9fHr_Cl4XZUftwK7Xc9xN7mDp40zTT?usp=sharing",
             background : "/images/etl/etllogo1.jpg",
@@ -356,8 +377,11 @@ export function dataProjects() {
         {
             slug: "portfolio-kevin",
             title: "My Portfolio Website",
-            description:"Using css and jsx to create my personal portfolio website with nextjs as a framework.",
-            description2:"This project focuses on Extract, Transform, and Load (ETL) streetwear sales data using Pentaho to integrate multiple data sources into a centralized repository. Developed as an assignment for the Marketing Intelligence course, the project uses dummy data modeled after the operations of one of the largest streetwear companies in Indonesia. The analysis examines the impact of marketing companies on consumer purchasing power across different regions and identifies the most effective marketing tools for various demographic segments, including age, income level, and geographic location. The results aim to support data-driven marketing decisions and improve targeting strategies to enhance sales performance.",
+            description:"Portfolio Using css and jsx to create my personal portfolio website with nextjs as a framework.",
+            description2:[
+                "This portfolio website is a frontend project developed using CSS and JSX with the Next.js framework.The background of this project was to strengthen my skills as a business analyst by gaining hands-on experience in frontend development. During my internship, I realized that I sometimes lacked technical confidence when discussing frontend implementation with developers. Therefore, I decided to practice directly by building my own website interface.",
+                "This was my first experience developing a complete website interface and a personal project created outside of university coursework and internship requirements. Through this project, I learned the fundamentals of frontend development, including rendering concepts, JavaScript basics, UI styling(especially use tailwindcss), React Hooks, API concepts, navigation, component grouping, and the use of various reusable components specifically within the React ecosystem.",
+            ],
             software:["Programming"],
             link: "https://github.com/kempinn",
             background : "/images/etl/etllogo1.jpg",

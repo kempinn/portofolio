@@ -5,7 +5,7 @@ import { div } from 'framer-motion/m';
 
 export default function Footer() {
     return(
-        <footer className="w-full bg-white py-12 px-6 mt-20 md:px-20 border-t border-gray-100 font-sans">
+        <footer className="w-full py-12 px-6 mt-20 md:px-20 border-t border-gray-100 font-sans">
         <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 text-left">

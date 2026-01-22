@@ -13,14 +13,16 @@ export function dataCertificate() {
             icon: <Award className="w-6 h-6" />,
             Description :"Impressive Performance Students during semesters, with a criteria acumulated score > 3.5",
             skills_act:[
-                "Java Programming",
-                 "UML",
-                "Accounting",
-                "System Designing and Analysis",
+                "System Design",
+                 "UI UX Design",
+                "Relational Database",
+                "Manual Software Testing",
+                "Data Visualization",
                 "Project Management",
-                "Database Query and Modelling",
-                "Testing",
-                "Data Visualization"]
+                "Non-Relational Database",
+                "ETL Data",
+                "Programming"
+            ]
         },
 
         {

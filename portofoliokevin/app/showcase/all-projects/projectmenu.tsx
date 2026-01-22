@@ -174,7 +174,7 @@ export default function ShowcaseMenu() {
                 <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center mb-4">
                   <TableProperties className="w-6 h-6 text-teal-500" strokeWidth={2} />
                 </div>
-                <h3 className="text-lg font-bold text-gray-500 mb-2">Non-Relational DB</h3>
+                <h3 className="text-lg font-bold text-gray-500 mb-2">Non-Relational Database</h3>
                 <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-grow">Handling dynamic data structures and supporting business analysis with NoSQL.</p>
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-1"><span className="text-xs font-medium text-gray-400">Proficiency</span><span className="text-xs font-bold text-teal-500">30%</span></div>
