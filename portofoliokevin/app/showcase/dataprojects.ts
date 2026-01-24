@@ -384,7 +384,7 @@ export function dataProjects() {
             ],
             software:["Programming"],
             link: "https://github.com/kempinn",
-            background : "/images/etl/etllogo1.jpg",
+            background : "/images/portofolio/portofolio.jpeg",
             tools : 4,
             documentation : 1,
             toolsused:["Github","NextJS", "TailwindCSS","JSX"],
@@ -410,51 +410,7 @@ export function dataProjects() {
        
         ],
             images: [
-                    "/images/etl/etl1.jpg",
-                    "/images/etl/etl4.png",
-                    "/images/etl/etl2.jpg",
-                    "/images/etl/etl3.jpg"       
-        ]
-
-        }
-        ,
-        {
-            slug: "craft-website",
-            title: "Craft Website",
-            description:"Craft is a web application designed to facilitate the buying and selling of craft products while also integrating a job-seeking service that enables buyers and craftsmen to apply for available positions offered by business-owning craftsmen within the same platform.",
-            description2:"This project focuses on Extract, Transform, and Load (ETL) streetwear sales data using Pentaho to integrate multiple data sources into a centralized repository. Developed as an assignment for the Marketing Intelligence course, the project uses dummy data modeled after the operations of one of the largest streetwear companies in Indonesia. The analysis examines the impact of marketing companies on consumer purchasing power across different regions and identifies the most effective marketing tools for various demographic segments, including age, income level, and geographic location. The results aim to support data-driven marketing decisions and improve targeting strategies to enhance sales performance.",
-            software:["Programming"],
-            link: "https://github.com/kempinn",
-            background : "/images/etl/etllogo1.jpg",
-            tools : 4,
-            documentation : 1,
-            toolsused:["Github","NextJS", "TailwindCSS","JSX"],
-            features :["Iteractive and Responsive Design"],
-            process: [
-        {
-            title: "Instalation Text Editor",
-            description:
-            "Instalation Visual Studio Code as a text editor.",
-        },
-        {
-            title: "Instalation Dependencies and Library",
-            description: 
-            "Instalation Nextjs, React, Tailwindcss, and other required dependencies using npm.",
-        },
-         
-        {
-            title: "Instalation Github Repository",
-            description: 
-            "Make a repository on Github and connect with local project.",
-        },
- 
-       
-        ],
-            images: [
-                    "/images/etl/etl1.jpg",
-                    "/images/etl/etl4.png",
-                    "/images/etl/etl2.jpg",
-                    "/images/etl/etl3.jpg"       
+                    "/images/portofolio/logoportofolio.jpeg"       
         ]
 
         }

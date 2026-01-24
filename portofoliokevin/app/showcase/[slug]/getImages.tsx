@@ -68,10 +68,10 @@ const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="font-sans w-full h-auto relative">
-      <div className="w-full relative group aspect-video overflow-hidden rounded-2xl bg-gray-100">
+      <div className="w-full relative group aspect-video overflow-hidden rounded-2xl bg-white">
         <button
           onClick={prev}
-          className="absolute left-5 top-4/7 -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition opacity-0 group-hover:opacity-100"
+          className="absolute left-5 top-4/7 -translate-y-1/2 bg-gray-100 p-2 rounded-full shadow-md hover:bg-gray-300 transition opacity-0 group-hover:opacity-100"
         >
           <ChevronLeft className="text-black cursor-pointer"/>
         </button>
@@ -116,7 +116,7 @@ const [showModal, setShowModal] = useState(false);
               <button 
               key={index}
               onClick={() => handlerImages(index)}
-              className={`bg-gray-100 relative mt-5 rounded-xl overflow-hidden aspect-video cursor-pointer transition-all ${index===active ? "ring-2 ring-blue-500 ring-offset-2 opacity-100 scale-105" : "opacity-60 hover:opacity-100 hover:scale-105" }`}>
+              className={`bg-white border border-gray-100 relative mt-5 rounded-xl overflow-hidden aspect-video cursor-pointer transition-all ${index===active ? "ring-2 ring-blue-500 ring-offset-2 opacity-100 scale-105" : "opacity-60 hover:opacity-100 hover:scale-105" }`}>
                 <img 
                 src={img}
                 alt={`Thumbnail ${index + 1}`} 
