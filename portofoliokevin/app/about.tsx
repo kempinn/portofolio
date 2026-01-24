@@ -122,7 +122,7 @@ export default function About() {
           {/* Download Button */}
           <motion.div variants={fadeInUp} className="flex justify-center lg:justify-start pt-4">
             <a 
-              href="/CV_KEVIN_Lamaran_Kerja.pdf" 
+              href="/CV_ChristopherKevin.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group flex items-center bg-sky-500 text-white px-8 py-3 gap-3 rounded-full hover:bg-sky-600 transition duration-300 shadow-lg shadow-sky-200"
