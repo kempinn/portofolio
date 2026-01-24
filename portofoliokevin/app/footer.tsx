@@ -58,13 +58,13 @@ export default function Footer() {
                     <motion.div variants={itemVariants} className="flex flex-col gap-4 items-start">
                         <h3 className="text-gray-500 font-bold">Connect</h3>
                         <div className="flex gap-4">
-                            <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-sky-100 text-gray-500 hover:text-sky-500 transition-all hover:-translate-y-1">
+                            <a href="mailto:akunbuatskola@gmail.com" className="p-2 bg-gray-100 rounded-full hover:bg-sky-100 text-gray-500 hover:text-sky-500 transition-all hover:-translate-y-1">
                                 <Github size={20} />
                             </a>
-                            <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-sky-100 text-gray-500 hover:text-sky-500 transition-all hover:-translate-y-1">
+                            <a href="https://www.linkedin.com/in/portokevin/" className="p-2 bg-gray-100 rounded-full hover:bg-sky-100 text-gray-500 hover:text-sky-500 transition-all hover:-translate-y-1">
                                 <Linkedin size={20} />
                             </a>
-                            <a href="#" className="p-2 bg-gray-100 rounded-full hover:bg-sky-100 text-gray-500 hover:text-sky-500 transition-all hover:-translate-y-1">
+                            <a href="https://github.com/kempinn/" className="p-2 bg-gray-100 rounded-full hover:bg-sky-100 text-gray-500 hover:text-sky-500 transition-all hover:-translate-y-1">
                                 <Mail size={20} />
                             </a>
                         </div>
