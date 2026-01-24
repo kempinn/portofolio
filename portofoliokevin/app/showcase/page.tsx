@@ -2,6 +2,7 @@
 import { Layers} from 'lucide-react';
 import ShowcaseMenu from './all-projects/projectmenu';
 
+
 export default function Showcase() {
   return (
     <div id='Showcase' className="font-sans min-h-screen bg-white font-sans text-gray-900 pb-20">
