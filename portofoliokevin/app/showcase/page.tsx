@@ -1,14 +1,5 @@
 
-import { 
-  Layout, 
-  Palette, 
-  Database, 
-  FlaskConical, 
-  BarChart3, 
-  Layers, 
-  Briefcase, 
-  Award 
-} from 'lucide-react';
+import { Layers} from 'lucide-react';
 import ShowcaseMenu from './all-projects/projectmenu';
 
 export default function Showcase() {
