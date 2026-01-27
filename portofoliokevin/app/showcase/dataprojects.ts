@@ -41,7 +41,7 @@ export function dataProjects() {
             images: [
                     "/images/curhataja/Article.png",
                     "/images/curhataja/Consultation.png",
-                    "/images/curhataja/Waiting room.png",
+                    "/images/curhataja/Waiting Room.png",
                     "/images/curhataja/chatkonsul.png",
 
         ]
