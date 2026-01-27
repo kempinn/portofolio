@@ -43,7 +43,6 @@ export function dataProjects() {
                     "/images/curhataja/Consultation.png",
                     "/images/curhataja/Waiting Room.png",
                     "/images/curhataja/chatkonsul.png",
-
         ]
 
         },
