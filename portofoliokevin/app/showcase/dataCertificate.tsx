@@ -30,7 +30,7 @@ export function dataCertificate() {
             slug : "Semi Finalist Duta Bahasa Binus @Semarang",
             issued : "Binus University",
             date : "14 January 2023",
-            link : "images/certification/dutabahasa.png",
+            link : "/CHRISTOPHER KEVIN GUNAWAN.pdf",
             color: "border-lime-500",
             skillColor:"bg-lime-50 text-lime-600 border border-lime-100",
             iconColor: "text-lime-600 bg-lime-50",
