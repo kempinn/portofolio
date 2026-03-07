@@ -154,6 +154,8 @@ export function ShowcaseContent() {
                 </div>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Excel</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Insomnia</span>
+                  <span className="px-3 py-1 bg-gray-50 font-medium text-gray-500 text-xs rounded-full border border-gray-100">Postman</span>
                 </div>
               </motion.div>
 
