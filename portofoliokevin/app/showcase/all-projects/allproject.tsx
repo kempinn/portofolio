@@ -185,7 +185,7 @@ export function ShowcaseContent() {
                   <Briefcase className="w-6 h-6 text-rose-500" strokeWidth={2} />
                 </div>
                 <h3 className="text-lg font-bold text-gray-500 mb-2">Project Management</h3>
-                <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-grow">Coordinating resources and tasks from execution to evaluation phases.</p>
+                <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-grow">Coordinating resources and project tasks throughout the Software Development Life Cycle (SDLC), from execution to evaluation phases, while applying structured methodologies such as Agile and Waterfall to ensure timely delivery and continuous improvement.</p>
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-1"><span className="text-xs font-medium text-gray-400">Proficiency</span><span className="text-xs font-bold text-rose-500">86%</span></div>
                   <div className="w-full h-2 bg-gray-100 rounded-full mt-2"><div className="h-full rounded-full bg-rose-500" style={{ width: '86%' }}></div></div>
