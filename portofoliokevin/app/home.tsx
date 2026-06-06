@@ -50,12 +50,12 @@ export default function Home() {
                     <span className="text-sky-300 font-bold">and System Analyst</span>
                 </h1>
 
-                <div className="max-w-2xl py-6 md:py-10">
+                {/* <div className="max-w-2xl py-6 md:py-10">
                     <p className="text-base md:text-xl font-medium text-gray-400 leading-relaxed">
                         Driving business growth through strategic analysis, 
                         <span className="md:block"> data-driven insights, and process optimization.</span>
                     </p>
-                </div>
+                </div> */}
                 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full pointer-events-auto">
                     <ViewMyWorkScroll />
