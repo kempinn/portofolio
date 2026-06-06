@@ -5,7 +5,7 @@ import { motion, easeOut,backOut } from "framer-motion";
 
 
 export default function About() {
-  // 1. Konfigurasi Animasi untuk Teks (Naik dari bawah)
+  //Animasi untuk teks naik ke atas dengan efek fade in
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { 
@@ -81,13 +81,13 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-sm md:text-base text-gray-500 leading-relaxed text-justify lg:text-left">
               <p>
-                I’m a Binus University graduate passionate about exploring the synergy between business and data. With a strong foundation in information technology and business analysis, I aim to bridge the gap between strategic decision-making and data-driven insights.
+                I offer organizations data-driven insights that inform smarter decisions, 
+                combined with systems optimization to improve efficiency and performance. 
               </p>
               <p>
-                My interest lies in analyzing complex business processes, identifying improvement opportunities, and transforming raw data into meaningful solutions that drive organizational growth.
-              </p>
-              <p>
-                I’m highly motivated to contribute to innovative projects where I can help organizations make smarter, data-backed decisions while enhancing their digital transformation journey.
+                By bridging technology with business strategy, I help companies streamline 
+                operations, identify growth opportunities, and create sustainable solutions 
+                that drive real results.
               </p>
             </div>
           </motion.div>

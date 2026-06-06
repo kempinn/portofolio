@@ -91,7 +91,7 @@ export function ShowcaseContent() {
                 <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
                   <Layout className="w-6 h-6 text-blue-500" strokeWidth={2} />
                 </div>
-                <h3 className="text-lg font-bold text-gray-500 mb-2">System Design</h3>
+                <h3 className="text-lg font-bold text-gray-500 mb-2">System Design and Architecture</h3>
                 <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-grow">Analyzing user challenges and translating them into efficient system designs through UML modeling and documentation.</p>
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-1"><span className="text-xs font-medium text-gray-400">Proficiency</span><span className="text-xs font-bold text-blue-500">90%</span></div>
