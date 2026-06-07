@@ -81,6 +81,10 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-sm md:text-base text-gray-500 leading-relaxed text-justify lg:text-left">
               <p>
+                Hi All, My Name is Christopher Kevin Gunawan, a passionate and experienced Information Technology Business Analyst and System Analyst. 
+                With a strong background in analyzing complex data, business processes and designing efficient systems, I specialize in bridging the gap between technology and business needs.
+              </p>
+              <p>
                 I offer organizations data-driven insights that inform smarter decisions, 
                 combined with systems optimization to improve efficiency and performance. 
               </p>
