@@ -10,7 +10,7 @@ Update Home
 Update About me
 
 - Reduce general long introduction. Show up with the goal " What you can offered? " (DONE)
-- Change card or add card with value proposition offered, like data insgith, system optimization and etc
+- Change card or add card with value proposition offered, like data insgith, system optimization and etc (DONE)
 - Add new section timeline journey below "About Me" Section
 - Fitting by resize image and border
 

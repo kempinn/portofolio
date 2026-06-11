@@ -1,6 +1,6 @@
 "use client"; // Tambahkan ini jika menggunakan Next.js App Router
 
-import { Briefcase, Users, Award, Download } from "lucide-react";
+import { Users, Award, Download,BarChart3,Gauge, TrendingUp } from "lucide-react";
 import { motion, easeOut,backOut } from "framer-motion";
 
 
@@ -102,25 +102,61 @@ export default function About() {
             className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8"
           >
             {/* Card 1 */}
-            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all text-center">
-              <Briefcase className="text-sky-500 mx-auto mb-2" size={24} />
-              <h3 className="font-bold text-xl text-gray-700">1 <span className="text-xs text-gray-400 font-normal">Year</span></h3>
-              <p className="text-xs text-gray-500">Internship Exp.</p>
+          <div className="group p-4 md:p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center">
+
+             <div className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-2 mt-6 flex items-center justify-center rounded-xl border border-sky-200 bg-sky-50 transition-colors group-hover:bg-sky-100">
+                <BarChart3 className="w-5 h-5 md:w-6 md:h-6 text-sky-500" />
             </div>
 
-            {/* Card 2 */}
-            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all text-center">
-              <Users className="text-sky-500 mx-auto mb-2" size={24} />
-              <h3 className="font-bold text-xl text-gray-700">10<span className="text-xs text-gray-400 font-normal">+</span></h3>
-              <p className="text-xs text-gray-500">Project Delivered</p>
+            <div>
+                <h3 className="min-h-[48px] flex items-center justify-center text-base font-semibold text-sky-800 leading-tight">
+                  Data Insights
+                </h3>
+
+                <p className="-mt-2 text-xs text-slate-500">
+                  Analytics & Trends
+                 </p>
+             </div>
+
+          </div>
+
+        {/* Card 2 */}
+        <div className="group p-4 md:p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center">
+
+          <div className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-2 mt-6 flex items-center justify-center rounded-xl border border-amber-200 bg-amber-50 transition-colors group-hover:bg-amber-100">
+            <BarChart3 className="w-5 h-5 md:w-6 md:h-6 text-amber-500" />
+          </div>
+
+          <div>
+              <h3 className="min-h-[48px] flex items-center justify-center text-base font-semibold text-amber-800 leading-tight whitespace-nowrap">
+                System Optimization
+              </h3>
+
+              <p className="-mt-2 text-xs text-slate-500">
+                Performance and Efficiency
+               </p>
             </div>
 
-            {/* Card 3 */}
-            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all text-center">
-              <Award className="text-sky-500 mx-auto mb-2" size={24} />
-              <h3 className="font-bold text-xl text-gray-700">2<span className="text-xs text-gray-400 font-normal">+</span></h3>
-              <p className="text-xs text-gray-500">Certifications</p>
+        </div>
+
+        {/* Card 3 */}
+          <div className="group p-4 md:p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center">
+
+            <div className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-2 mt-6 flex items-center justify-center rounded-xl border border-emerald-200 bg-emerald-50 transition-colors group-hover:bg-emerald-100">
+              <TrendingUp className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" />
             </div>
+
+             <div>
+                <h3 className="min-h-[48px] flex items-center justify-center text-base font-semibold text-emerald-800 leading-tight">
+                   Business Impact
+                </h3>
+
+                <p className="-mt-2 text-xs text-slate-500">
+                  Value Delivered
+                 </p>
+             </div>
+
+          </div>
           </motion.div>
 
           {/* Download Button */}
